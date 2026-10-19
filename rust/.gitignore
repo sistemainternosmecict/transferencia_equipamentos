@@ -1,0 +1,52 @@
+# Rust build artifacts
+/target/
+target/
+**/*.rs.bk
+*.bk
+
+# Generated binaries and libraries
+*.rlib
+*.so
+*.dylib
+*.dll
+*.lib
+*.exp
+*.pdb
+
+# Maturin / PyO3 / Python artifacts
+.venv/
+venv/
+env/
+wheels/
+dist/
+build/
+__pycache__/
+*.py[cod]
+*$py.class
+*.whl
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

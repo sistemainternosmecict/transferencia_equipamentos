@@ -1,0 +1,39 @@
+# Artefatos de compilação Rust
+target/
+rust/target/
+*.rlib
+*.so
+*.dylib
+*.dll
+
+# Ambientes e caches Python / uv / Maturin
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+python/.venv/
+venv/
+env/
+dist/
+build/
+wheels/
+*.egg-info/
+*.whl
+.pytest_cache/
+python/.pytest_cache/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Documentos PDF gerados dinamicamente (mantém apenas a estrutura da pasta)
+pdf/*.pdf
+!pdf/.gitkeep
+
+# IDEs e Sistema Operacional
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.log

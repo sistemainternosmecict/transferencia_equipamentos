@@ -1,0 +1,29 @@
+[package]
+name = "transferencia_pdf"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "transferencia_pdf"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "transferencia_pdf"
+path = "src/main.rs"
+
+[dependencies]
+typst = "0.15"
+typst-as-lib = { version = "0.17", features = ["typst-kit-embed-fonts", "typst-kit-fonts"] }
+typst-pdf = "0.15"
+typst-layout = "0.15"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.22"
+pyo3 = { version = "0.29", optional = true, features = ["extension-module"] }
+
+[features]
+default = ["python"]
+python = ["dep:pyo3"]
+
+[package.metadata.maturin]
+bindings = "pyo3"
